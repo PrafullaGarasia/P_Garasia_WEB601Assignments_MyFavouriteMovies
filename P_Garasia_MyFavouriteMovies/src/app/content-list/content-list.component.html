@@ -1,6 +1,6 @@
 <div *ngFor="let content of contents | slice: 0.5" class="content-card">
     <h1>{{ content.title }}</h1>
-    <img *ngIf="content.imgURL" [alt]="content.title"(click)="images(content)">
+    <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="images(content)">
     <p>{{content.description}}</p>
     <p>Creator: {{ content.creator}}</p>
     <p *ngIf="content.type">Type: {{ content.type}}</p>

@@ -42,11 +42,11 @@ constructor(){
   },
   {
     id: 3,
-    title: "Doctor Strange in the Multiverse of Madness",
-    description: "Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats, including other-universe versions of himself, which threaten to wipe out millions across the multiverse. They seek help from Wanda the Scarlet Witch, Wong and others.",
-    creator: "Sam Raimi",
-    imgURL: "https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_.jpg",
-    type: "Action, Adventure, Fantasy, Horror, Sci-Fi"    
+    title: "Spider-Man: Far from Home",
+    description: "Following the events of Avengers: Endgame (2019), Spider-Man must step up to take on new threats in a world that has changed forever.",
+    creator: "Jon Watts",
+    imgURL: "https://cdn.marvel.com/content/1x/spider-manfarfromhome_lob_crd_04_3.jpg",
+    type: "Action, Adventure, Comedy, Sci-Fi"    
   },
   {
     id: 4,
@@ -58,11 +58,11 @@ constructor(){
   },
   {
     id: 5,
-    title: "Doctor Strange in the Multiverse of Madness",
-    description: "Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats, including other-universe versions of himself, which threaten to wipe out millions across the multiverse. They seek help from Wanda the Scarlet Witch, Wong and others.",
-    creator: "Sam Raimi",
-    imgURL: "https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_.jpg",
-    type: "Action, Adventure, Fantasy, Horror, Sci-Fi"    
+    title: "Avengers: Endgame",
+    description: "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+    creator: "Anthony , RussoJoe Russo",
+    imgURL: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
+    type: "Action, Adventure, Drama, Sci-Fi"    
   }
   ];
 }
