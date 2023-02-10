@@ -8,6 +8,10 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent {
 contents: Content[];
+images(content: any){
+  console.log(`ID: ${content.id}`);
+  console.log(`Title: ${content.title}`);
+}
 
 constructor(){
   this.contents= [
@@ -46,11 +50,11 @@ constructor(){
   },
   {
     id: 4,
-    title: "Doctor Strange in the Multiverse of Madness",
-    description: "Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats, including other-universe versions of himself, which threaten to wipe out millions across the multiverse. They seek help from Wanda the Scarlet Witch, Wong and others.",
-    creator: "Sam Raimi",
-    imgURL: "https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_.jpg",
-    type: "Action, Adventure, Fantasy, Horror, Sci-Fi"    
+    title: "Thor: Love and Thunder",
+    description: "Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct.",
+    creator: "Taika Waititi",
+    imgURL: "https://m.media-amazon.com/images/M/MV5BYmMxZWRiMTgtZjM0Ny00NDQxLWIxYWQtZDdlNDNkOTEzYTdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    type: "Action, Adventure, Fantasy, Sci-Fi"    
   },
   {
     id: 5,
