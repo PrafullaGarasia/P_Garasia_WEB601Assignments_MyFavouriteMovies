@@ -8,6 +8,7 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent {
 contents: Content[];
+title: any;
 images(content: any){
   console.log(`ID: ${content.id}`);
   console.log(`Title: ${content.title}`);
@@ -63,6 +64,22 @@ constructor(){
     creator: "Anthony , RussoJoe Russo",
     imgURL: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
     type: "Action, Adventure, Drama, Sci-Fi"    
+  },
+  {
+    id: 6,
+    title: "Black Panther",
+    description: "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
+    creator: "Ryan Coogler",
+    imgURL: "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg",
+    type: "Action, Adventure, Sci-Fi"    
+  },
+  {
+    id: 7,
+    title: "Captain Marvel",
+    description: "Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.",
+    creator: "Anna Boden, Ryan Fleck",
+    imgURL: "https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_FMjpg_UX1000_.jpg",
+    type: "Action, Adventure, Sci-Fi"    
   }
   ];
 }
