@@ -12,8 +12,8 @@
 </div>
 
 <div>
-    <h1>Fantasy Type</h1>
-    <div *ngFor="let content of contents | typeFilter:'Fantasy'" class="content-card Fantasy">
+    <h1>Action Type</h1>
+    <div *ngFor="let content of contents | typeFilter:'Action'" class="content-card Action">
         <h1>{{ content.title }}</h1>
         <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)">
         <p>{{content.description}}</p>
@@ -23,8 +23,8 @@
     </div>
 </div>
 <div>
-    <h1>Comedy Type</h1>
-    <div *ngFor="let content of contents | typeFilter:'Comedy'" class="content-card Comedy">
+    <h1>Adventure Type</h1>
+    <div *ngFor="let content of contents | typeFilter:'Adventure'" class="content-card Adventure">
         <h1>{{ content.title }}</h1>
         <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)">
         <p>{{content.description}}</p>
@@ -35,7 +35,7 @@
 </div>
 <div>
     <h1>No Type</h1>
-    <div *ngFor="let content of contents | typeFilter:''" class="content-card noType">
+    <div *ngFor="let content of contents | typeFilter:'Fantasy'" class="content-card noType">
         <h1>{{ content.title }}</h1>
         <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)">
         <p>{{content.description}}</p>
