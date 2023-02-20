@@ -1,16 +1,21 @@
-<div *ngFor="let content of contents | slice: 0:5" class="content-card">
-    <h1>{{ content.title }}</h1>
-    <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="images(content)">
-    <p>{{content.description}}</p>
-    <p>Creator: {{ content.creator}}</p>
-    <p *ngIf="content.type">Type: {{ content.type}}</p>
-    <p *ngIf="content.tags">Tags: {{ content.tags}}</p>
+<div class="searchArea">
+    <div class="input">
+        <input type="text" [(ngModel)]="title" placeholder="Search Title...">
+        <button (click)="searchForTitle()">Search</button>
+    </div>
+
+    <div class="output" *ngIf="isTitleExists !== null">
+        <p [style.color]="isTitleExists ? 'green' : 'red'">
+            {{isTitleExists ? 'Title exist' : 'No title exists'}}
+        </p>
+    </div>
 </div>
+
 <div>
     <h1>Fantasy Type</h1>
     <div *ngFor="let content of contents | typeFilter:'Fantasy'" class="content-card">
         <h1>{{ content.title }}</h1>
-        <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="title(content)">
+        <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)">
         <p>{{content.description}}</p>
         <p>Creator: {{ content.creator}}</p>
         <p *ngIf="content.type">Type: {{ content.type}}</p>
@@ -21,7 +26,7 @@
     <h1>Comedy Type</h1>
     <div *ngFor="let content of contents | typeFilter:'Comedy'" class="content-card">
         <h1>{{ content.title }}</h1>
-        <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="title(content)">
+        <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)">
         <p>{{content.description}}</p>
         <p>Creator: {{ content.creator}}</p>
         <p *ngIf="content.type">Type: {{ content.type}}</p>
@@ -32,7 +37,7 @@
     <h1>No Type</h1>
     <div *ngFor="let content of contents | typeFilter:''" class="content-card noType">
         <h1>{{ content.title }}</h1>
-        <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="title(content)">
+        <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)">
         <p>{{content.description}}</p>
         <p>Creator: {{ content.creator}}</p>
         <p *ngIf="content.type">Type: {{ content.type}}</p>

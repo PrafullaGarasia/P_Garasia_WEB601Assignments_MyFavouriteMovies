@@ -1,3 +1,4 @@
+import { keyframes } from "@angular/animations";
 import { Component } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
@@ -8,10 +9,16 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent {
 contents: Content[];
-title: any;
-images(content: any){
+  title: string = '';
+  isTitleExists: boolean | null = null;
+
+loggingTitle(content: any){
   console.log(`ID: ${content.id}`);
   console.log(`Title: ${content.title}`);
+}
+
+searchForTitle(){
+  this.isTitleExists = this.contents.some(content => content.title === this.title);
 }
 
 constructor(){
