@@ -15,32 +15,79 @@
     <h1>Action Type</h1>
     <div *ngFor="let content of contents | typeFilter:'Action'" class="content-card Action">
         <h1>{{ content.title }}</h1>
-        <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)">
+
+        <div *ngIf="content.imgURL; else defaultImage">
+            <img [src]="content.imgURL" [alt]="content.title" (click)="loggingTitle(content)">
+        </div>
+        <ng-template #defaultImage>
+            <img [src]="defaultMovieImage" [alt]="content.title" (click)="loggingTitle(content)">
+        </ng-template>
+
+        <!-- <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)"> -->
         <p>{{content.description}}</p>
         <p>Creator: {{ content.creator}}</p>
-        <p *ngIf="content.type">Type: {{ content.type}}</p>
-        <p *ngIf="content.tags">Tags: {{ content.tags}}</p>
+        <!-- <p *ngIf="content.type">Type: {{ content.type}}</p>
+        <p *ngIf="content.tags">Tags: {{ content.tags}}</p> -->
+
+        <p *ngIf="content.type" appHoverAffect="underline"  >Type: {{ content.type}}</p>
+
+        <div *ngIf="content.tags"><strong>Tags:</strong> 
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">
+                {{tag}},
+            </span>
+        </div>
     </div>
 </div>
+
 <div>
     <h1>Adventure Type</h1>
     <div *ngFor="let content of contents | typeFilter:'Adventure'" class="content-card Adventure">
         <h1>{{ content.title }}</h1>
-        <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)">
+        <!-- <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)"> -->
+        
+        <div *ngIf="content.imgURL; else defaultImage">
+            <img [src]="content.imgURL" [alt]="content.title" (click)="loggingTitle(content)">
+        </div>
+        <ng-template #defaultImage>
+            <img [src]="defaultMovieImage" [alt]="content.title" (click)="loggingTitle(content)">
+        </ng-template>
+
         <p>{{content.description}}</p>
         <p>Creator: {{ content.creator}}</p>
-        <p *ngIf="content.type">Type: {{ content.type}}</p>
-        <p *ngIf="content.tags">Tags: {{ content.tags}}</p>
+
+        <p *ngIf="content.type" appHoverAffect="underline"  >Type: {{ content.type}}</p>
+
+        <div *ngIf="content.tags"><strong>Tags:</strong> 
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">
+                {{tag}},
+            </span>
+        </div>
+        
     </div>
 </div>
 <div>
     <h1>No Type</h1>
     <div *ngFor="let content of contents | typeFilter:'Fantasy'" class="content-card noType">
         <h1>{{ content.title }}</h1>
-        <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)">
+
+        <div *ngIf="content.imgURL; else defaultImage">
+            <img [src]="content.imgURL" [alt]="content.title" (click)="loggingTitle(content)">
+        </div>
+        <ng-template #defaultImage>
+            <img [src]="defaultMovieImage" [alt]="content.title" (click)="loggingTitle(content)">
+        </ng-template>
+        
         <p>{{content.description}}</p>
         <p>Creator: {{ content.creator}}</p>
-        <p *ngIf="content.type">Type: {{ content.type}}</p>
-        <p *ngIf="content.tags">Tags: {{ content.tags}}</p>
+
+        <p *ngIf="content.type" appHoverAffect="underline"  >Type: {{ content.type}}</p>
+
+        <div *ngIf="content.tags"><strong>Tags:</strong> 
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">
+                {{tag}},
+            </span>
+        </div>
+        
+
     </div>
 </div>

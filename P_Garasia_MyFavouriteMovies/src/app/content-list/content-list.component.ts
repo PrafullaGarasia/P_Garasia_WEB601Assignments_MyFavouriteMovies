@@ -8,7 +8,8 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent {
-contents: Content[];
+  contents: Content[];
+  defaultMovieImage: string = 'https://www.pngitem.com/pimgs/m/464-4644133_play-movie-video-clapper-scene-transparent-background-movies.png';
   title: string = '';
   isTitleExists: boolean | null = null;
 
