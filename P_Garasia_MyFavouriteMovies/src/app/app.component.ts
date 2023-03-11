@@ -19,6 +19,6 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    this.MovieService.getMovieById(4).subscribe(content => this.topMovieContent = content);
+    this.MovieService.getMovieById(3).subscribe(content => this.topMovieContent = content);
   }
 }
