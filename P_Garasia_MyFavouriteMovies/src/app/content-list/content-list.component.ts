@@ -12,10 +12,27 @@ export class ContentListComponent {
   defaultMovieImage: string = 'https://www.pngitem.com/pimgs/m/464-4644133_play-movie-video-clapper-scene-transparent-background-movies.png';
   title: string = '';
   isTitleExists: boolean | null = null;
+  errTxt: boolean = false;
 
 loggingTitle(content: any){
   console.log(`ID: ${content.id}`);
   console.log(`Title: ${content.title}`);
+}
+
+addContent(newContent: Content){
+  const AddPromise = new Promise((resolve, reject) => {
+    this.contents.push(newContent);
+    this.contents = [...this.contents];
+    resolve(newContent.title);
+  });
+
+  AddPromise.then(title => {
+    console.log(`Content Added successfully, Title: ${title}`);
+    this.errTxt = false;
+  }).catch(err => {
+    this.errTxt = true;
+  });
+  
 }
 
 searchForTitle(){
