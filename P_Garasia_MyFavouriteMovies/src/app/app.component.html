@@ -1,1 +1,24 @@
+<div  class="content-card noType">
+    <h1>{{ topMovieContent.title }}</h1>
+
+    <div *ngIf="topMovieContent.imgURL; else defaultImage">
+        <img [src]="topMovieContent.imgURL" [alt]="topMovieContent.title" (click)="loggingIDnTitle(topMovieContent)">
+    </div>
+    <ng-template #defaultImage>
+        <img [src]="defaultMovieImage" [alt]="topMovieContent.title" (click)="loggingIDnTitle(topMovieContent)">
+    </ng-template>
+
+    <p>{{topMovieContent.description}}</p>
+    <p>Creater: {{ topMovieContent.creator}}</p>
+    <p *ngIf="topMovieContent.type" appHoverAffect="underline"  >Type: {{ topMovieContent.type}}</p>
+
+    <div *ngIf="topMovieContent.tags"><strong>Tags:</strong> 
+        <span *ngFor="let tag of topMovieContent.tags" appHoverAffect="bold">
+            {{tag}},
+        </span>
+    </div>
+</div>
+
 <app-content-list></app-content-list>
+
+<app-message></app-message>
