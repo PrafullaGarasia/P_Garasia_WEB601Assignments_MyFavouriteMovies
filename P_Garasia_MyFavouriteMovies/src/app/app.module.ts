@@ -9,6 +9,7 @@ import { TypeFilterPipe } from './type-filter.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ModifyContentComponentComponent } from './modify-content-component/modi
     TypeFilterPipe,
     HoverAffectDirective,
     CreateContentComponent,
-    ModifyContentComponentComponent
+    ModifyContentComponentComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
