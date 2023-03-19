@@ -1,7 +1,7 @@
-<app-create-content (onCreation)="addContent($event)"></app-create-content>
-<p class="errTxt" *ngIf="errTxt">Content Addition failed</p>
+<br><hr>
+<app-modify-content-component (onCreation)="addContent($event)"></app-modify-content-component>
+<hr><br>
 
-<hr> <br>
 <div class="searchArea">
     <div class="input">
         <input type="text" [(ngModel)]="title" placeholder="Search Title...">
@@ -27,12 +27,9 @@
             <img [src]="defaultMovieImage" [alt]="content.title" (click)="loggingTitle(content)">
         </ng-template>
 
-        <!-- <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="loggingTitle(content)"> -->
+        
         <p>{{content.description}}</p>
         <p>Creator: {{ content.creator}}</p>
-        <!-- <p *ngIf="content.type">Type: {{ content.type}}</p>
-        <p *ngIf="content.tags">Tags: {{ content.tags}}</p> -->
-
         <p *ngIf="content.type" appHoverAffect="underline"  >Type: {{ content.type}}</p>
 
         <div *ngIf="content.tags"><strong>Tags:</strong> 

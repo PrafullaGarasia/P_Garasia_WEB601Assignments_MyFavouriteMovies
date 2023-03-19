@@ -8,6 +8,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { TypeFilterPipe } from './type-filter.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
+import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CreateContentComponent } from './create-content/create-content.componen
     ContentListComponent,
     TypeFilterPipe,
     HoverAffectDirective,
-    CreateContentComponent
+    CreateContentComponent,
+    ModifyContentComponentComponent
   ],
   imports: [
     BrowserModule,
