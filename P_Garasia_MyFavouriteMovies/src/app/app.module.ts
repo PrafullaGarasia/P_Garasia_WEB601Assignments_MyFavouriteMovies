@@ -11,6 +11,7 @@ import { CreateContentComponent } from './create-content/create-content.componen
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 import { MessageComponent } from './message/message.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HoverAffectDirective,
     CreateContentComponent,
     ModifyContentComponentComponent,
-    MessageComponent
+    MessageComponent,
+    AddContentDialogComponent
   ],
   imports: [
     BrowserModule,
