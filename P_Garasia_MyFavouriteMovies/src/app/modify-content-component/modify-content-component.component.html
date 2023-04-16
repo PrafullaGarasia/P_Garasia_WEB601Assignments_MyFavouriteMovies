@@ -1,11 +1,3 @@
 <div>
-    Title: <br> <input type="text" [(ngModel)]="newContent.title"> <br> <br>
-    Description: <br> <input type="text" [(ngModel)]="newContent.description"> <br> <br>
-    Creator: <br> <input type="text" [(ngModel)]="newContent.creator"> <br> <br>
-    Image Link: <br> <input type="text" [(ngModel)]="newContent.imgURL"> <br> <br> 
-    Type: <br> <input type="text" [(ngModel)]="newContent.type"> <br> <br>
-
-    <div>
-        <button (click)="addContent()">Add Content</button>
-    </div>
+    <button mat-raised-button color="primary" (click)="openContentDialog()">Add Content</button>
 </div>
