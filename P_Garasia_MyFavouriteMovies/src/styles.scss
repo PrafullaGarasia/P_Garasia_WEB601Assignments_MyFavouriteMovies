@@ -12,26 +12,26 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$R_Rajgor_FavouriteSongs-primary: mat.define-palette(mat.$blue-palette);
-$R_Rajgor_FavouriteSongs-accent: mat.define-palette(mat.$cyan-palette, A200, A100, A400);
+$P_Garasia_MyFavouriteMovies-primary: mat.define-palette(mat.$blue-palette);
+$P_Garasia_MyFavouriteMoviess-accent: mat.define-palette(mat.$cyan-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$R_Rajgor_FavouriteSongs-warn: mat.define-palette(mat.$red-palette);
+$P_Garasia_MyFavouriteMovies-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$R_Rajgor_FavouriteSongs-theme: mat.define-light-theme((
+$P_Garasia_MyFavouriteMovies-theme: mat.define-light-theme((
   color: (
-    primary: $R_Rajgor_FavouriteSongs-primary,
-    accent: $R_Rajgor_FavouriteSongs-accent,
-    warn: $R_Rajgor_FavouriteSongs-warn,
+    primary: $P_Garasia_MyFavouriteMovies-primary,
+    accent: $P_Garasia_MyFavouriteMovies-accent,
+    warn: $P_Garasia_MyFavouriteMovies-warn,
   )
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($R_Rajgor_FavouriteSongs-theme);
+@include mat.all-component-themes($P_Garasia_MyFavouriteMovies-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
