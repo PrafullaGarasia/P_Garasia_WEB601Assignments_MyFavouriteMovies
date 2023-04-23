@@ -1,8 +1,119 @@
-<div *ngFor="let content of contents | slice: 0.5" class="content-card">
-    <h1>{{ content.title }}</h1>
-    <img *ngIf="content.imgURL" [src]="content.imgURL" [alt]="content.title"(click)="images(content)">
-    <p>{{content.description}}</p>
-    <p>Creator: {{ content.creator}}</p>
-    <p *ngIf="content.type">Type: {{ content.type}}</p>
-    <p *ngIf="content.tags">Tags: {{ content.tags}}</p>
+<br><hr>
+<app-modify-content-component (onCreation)="addContent($event)"></app-modify-content-component>
+<hr><br>
+
+<div class="searchArea">
+    <div class="input">
+        <mat-form-field>
+            <mat-label>Search Title...</mat-label>
+            <input matInput type="text" [(ngModel)]="title">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="searchForTitle()">Search</button>
+    </div>
+
+    <div class="output" *ngIf="isTitleExists !== null">
+        <p [style.color]="isTitleExists ? 'green' : 'red'">
+            {{isTitleExists ? 'Title exist' : 'No title exists'}}
+        </p>
+    </div>
 </div>
+<mat-divider></mat-divider>
+<div>
+    <h1>Action Type</h1>
+    <mat-card *ngFor="let content of contents | typeFilter:'Action'" class="content-card Action">
+        <mat-card-header [matTooltip]="content.title">
+            <h1 mat-card-title>{{ content.title }}</h1>
+
+            <mat-card-subtitle>
+        <div *ngIf="content.imgURL; else defaultImage">
+            <img [src]="content.imgURL" [alt]="content.title" (click)="loggingTitle(content)">
+        </div>
+        <ng-template #defaultImage>
+            <img [src]="defaultMovieImage" [alt]="content.title" (click)="loggingTitle(content)">
+        </ng-template>
+    </mat-card-subtitle>
+</mat-card-header>
+        
+<mat-card-content>
+        <p>{{content.description}}</p>
+        <p>Creator: {{ content.creator}}</p>
+        <p *ngIf="content.type" appHoverAffect="underline"  >Type: {{ content.type}}</p>
+
+        <div *ngIf="content.tags"><strong>Tags:</strong> 
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">
+                {{tag}},
+            </span>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+    </div>
+    <mat-divider></mat-divider>
+
+
+<div>
+    <h1>Adventure Type</h1>
+    <mat-card *ngFor="let content of contents | typeFilter:'Adventure'" class="content-card Adventure">
+        <mat-card-header [matTooltip]="content.title">
+            <h1 mat-card-title>{{ content.title }}</h1>
+
+            <mat-card-subtitle>
+        
+        <div *ngIf="content.imgURL; else defaultImage">
+            <img [src]="content.imgURL" [alt]="content.title" (click)="loggingTitle(content)">
+        </div>
+        <ng-template #defaultImage>
+            <img [src]="defaultMovieImage" [alt]="content.title" (click)="loggingTitle(content)">
+        </ng-template>
+    </mat-card-subtitle>
+</mat-card-header>
+
+<mat-card-content>
+        <p>{{content.description}}</p>
+        <p>Creator: {{ content.creator}}</p>
+
+        <p *ngIf="content.type" appHoverAffect="underline"  >Type: {{ content.type}}</p>
+
+        <div *ngIf="content.tags"><strong>Tags:</strong> 
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">
+                {{tag}},
+            </span>
+        </div>
+    </mat-card-content>
+</mat-card>
+    </div>
+
+    <mat-divider></mat-divider>
+<div>
+    <h1>No Type</h1>
+    <mat-card *ngFor="let content of contents | typeFilter:'Fantasy'" class="content-card noType">
+        <mat-card-header [matTooltip]="content.title">
+            <h1 mat-card-title>{{ content.title }}</h1>
+
+            <mat-card-subtitle>
+
+        <div *ngIf="content.imgURL; else defaultImage">
+            <img [src]="content.imgURL" [alt]="content.title" (click)="loggingTitle(content)">
+        </div>
+        <ng-template #defaultImage>
+            <img [src]="defaultMovieImage" [alt]="content.title" (click)="loggingTitle(content)">
+        </ng-template>
+    </mat-card-subtitle>
+</mat-card-header>
+
+<mat-card-content>
+        <p>{{content.description}}</p>
+        <p>Creator: {{ content.creator}}</p>
+
+
+        <p *ngIf="content.type" appHoverAffect="underline"  >Type: {{ content.type}}</p>
+
+        <div *ngIf="content.tags"><strong>Tags:</strong> 
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">
+                {{tag}},
+            </span>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+    </div>
